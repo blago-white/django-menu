@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div>
+    <ul>
+        {% for menu_ in menu %}
+            {% for name, val in menu_.items %}
+                {% if name == 'name' %}
+                    <li>{{ val }}</li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
