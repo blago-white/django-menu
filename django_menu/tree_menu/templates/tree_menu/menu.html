@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% if menu %}
+    <ul>
+        {% for item in menu %}
+            {% if item.highlight %}
+                <li><a href="{{ item.href|urlencode }}" class="highlighted" >{{ item.title }}</a></li>
+            {% else %}
+                <li><a href="{{ item.href|urlencode }}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>This menu is empty!</p>
+{% endif %}

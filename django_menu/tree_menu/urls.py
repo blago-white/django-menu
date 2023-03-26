@@ -22,5 +22,5 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
-    path('<str:slug>', views.base)
+    path('<str:slug>', views.menu),
 ]

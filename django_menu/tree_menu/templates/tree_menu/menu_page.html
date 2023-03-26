@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-{% load django_menu %}
+{% load static %}
+{% load menu_view %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ slug }}</title>
+    <link rel="stylesheet" href="{% static 'tree_menu/css/menu_style.css' %}">
 </head>
 <body>
     {% draw_menu slug %}

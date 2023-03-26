@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'tree_menu/css/menu_style.css' %}">
+</head>
+<body>
+    <ul>
+        {% for name, src, highlight in menues %}
+            {% if highlight %}
+                <li><a href="{{ src|urlencode }}" class="highlighted">{{ name }}</a></li>
+            {% else %}
+                <li><a href="{{ src|urlencode }}">{{ name }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
